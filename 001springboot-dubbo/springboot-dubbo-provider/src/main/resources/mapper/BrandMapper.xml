@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.wmy.springbootdubboprovider.mapper.BrandMapper">
+  <resultMap id="brandMap" type="cn.com.wmy.springbootdubboapi.pojo.Brand">
+    <id column="id" jdbcType="INTEGER" property="id"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="image" jdbcType="VARCHAR" property="image"/>
+    <result column="letter" jdbcType="VARCHAR" property="letter"/>
+    <result column="seq" jdbcType="INTEGER" property="seq"/>
+  </resultMap>
+  <select id="findAll" resultMap="brandMap">
+    SELECT * FROM  tb_brand
+  </select>
+</mapper>
